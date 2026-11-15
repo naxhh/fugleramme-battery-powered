@@ -7,6 +7,8 @@ With optional Home Assistant reporting for battery and refresh tracking.
 
 The board sleeps most of the time and only wakes up to refresh the frame, skips refresh during a configurable night schedule. Only redraws if the image has changed.
 
+During dev I had a battery puncture... I'll add at some point a model to enclose the battery but anything will do. Just make sure it can't get punctured :)
+
 ## How it works
 
 Each wake:
@@ -54,10 +56,20 @@ header. Pin 1 is the corner one on the back of the whale and 2 is the one on the
 | Capacitor `+` (long leg) | | 17 (3.3 V) |
 | Capacitor `−` (striped leg) | | 20 (GND) |
 
-My suggestion is that you solder wires instead of using jumper wires since it will be harder to close after.
+My suggestion is that you solder wires instead of using jumper wires since it will be harder to close after. (ask me how i know...)
 
 **Never connect the Inky's 5 V pins (2 and 4).** Everything runs from the
 Feather's 3.3 V regulator.
+
+![pin diagram](./images/pin-diagram.png)
+
+Example inky wiring
+![pin diagram](./images/inky-pins.png)
+
+Example ada wiring
+![pin diagram](./images/ada-pins.png)
+
+Battery is not plugged-in as I had a small puncture and decided to replace it.
 
 ## Server setup
 
